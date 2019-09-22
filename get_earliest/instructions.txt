@@ -24,7 +24,8 @@ There are many ways to solve this. See if you can figure out the clearest and mo
 
 Bonus
 
-If you complete the main exercise, there's also a bonus for you to attempt: allow the function to accept any number of arguments and return the earliest date string of all provided. ✔️
+If you complete the main exercise, there's also a bonus for you to attempt: allow the function to accept any number of arguments
+ and return the earliest date string of all provided. ✔️
 
 So if you complete the bonus, this should work:
 
