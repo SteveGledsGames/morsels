@@ -34,7 +34,7 @@ def get_earliest(datestring, *args):
             newmonth, newday, newyear = convert_to_date(date)
             earlymonth, earlyday, earlyyear = find_earliest(earlymonth, earlyday, earlyyear, newmonth, newday, newyear)
 
-    return str(earlymonth) + "/" + str(earlyday) + "/" + str(earlyyear)
+    return str(earlymonth).zfill(2) + "/" + str(earlyday).zfill(2) + "/" + str(earlyyear)
 
 print(get_earliest("02/24/1946", "01/29/1946", "03/29/1945"))
 # "01/29.1946"
