@@ -4,6 +4,7 @@ I'd like to make sure you struggle on this one. See if you can think up at least
 
 I want you to write a function that accepts two strings and returns True if the two strings are anagrams of each other.
 
+
 Your function should work like this:
 
 >>> is_anagram("tea", "eat")

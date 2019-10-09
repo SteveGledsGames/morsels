@@ -2,9 +2,8 @@ def is_anagram(first, second):
     if len(first) != len(second):
         return False
     first, second = first.lower(), second.lower()
-    
-    return
 
+    return
 
 # I want you to write a function that accepts two strings and returns True if the two strings are anagrams of each other.
 
