@@ -19,6 +19,16 @@ class Circle:
     def __repr__(self):
         return f'Circle({self.radius})'
 
+    @property
+    def radius(self):
+        return self._radius
+
+    @radius.setter
+    def radius(self, radius):
+        if radius < 0:
+            raise ValueError("Radius cannot be negative")
+        self._radius = radius
+
 
 c = Circle(2)
 print(c)
@@ -29,7 +39,7 @@ c.radius = 1
 print(c.radius)
 print(c.diameter)
 print(c.area)
-c.diameter = 10
+c.diameter = -1
 print(c.radius)
 print(c.diameter)
 print(c.area)
