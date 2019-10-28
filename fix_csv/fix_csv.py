@@ -1,15 +1,14 @@
+from argparse import ArgumentParser
 import csv
-import sys
 
-with open(sys.argv[1], 'rt') as f:
-    with open(sys.argv[2], 'wt') as o:
-        reader = csv.reader(f)
-        writer = csv.writer(o)
-        for row in reader:
-            changed_row = [s.replace('|', ',') for s in row]
-            # print(row)
-            # # changed_row = str(row).replace('|', ',')
-            # print(changed_row)
-            writer.writerow(changed_row)
 
-            
+parser = ArgumentParser()
+parser.add_argument('old_filename')
+parser.add_argument('new_filename')
+args = parser.parse_args()
+
+with open(args.old_filename, newline='') as old_file:
+    rows = list(csv.reader(old_file, delimiter='|'))
+
+with open(args.new_filename, mode='wt', newline='') as new_file:
+    csv.writer(new_file).writerows(rows)
